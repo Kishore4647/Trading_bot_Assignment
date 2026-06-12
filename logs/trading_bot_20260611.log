@@ -1,0 +1,98 @@
+2026-06-11 17:34:10 | INFO     | trading_bot | Logger initialised — writing to logs/trading_bot_20260611.log
+2026-06-11 17:34:12 | INFO     | trading_bot | Logger initialised — writing to logs/trading_bot_20260611.log
+2026-06-11 23:37:30 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:39:23 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:39:23 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:39:23 | DEBUG    | trading_bot.client | → GET https://testnet.binancefuture.com/fapi/v1/time  params={}
+2026-06-11 23:39:23 | DEBUG    | trading_bot.client | ← HTTP 200  body={"serverTime":1781201363896}
+2026-06-11 23:39:23 | INFO     | trading_bot | Ping successful — serverTime=1781201363896
+2026-06-11 23:39:44 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:39:44 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:39:44 | INFO     | trading_bot | CLI place-order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:39:44 | DEBUG    | trading_bot.orders | Validated inputs — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:39:44 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=N/A
+2026-06-11 23:39:44 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1781201384369}
+2026-06-11 23:39:44 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-11 23:39:44 | ERROR    | trading_bot.orders | Order failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\My_studies\trading_bot\trading_bot\bot\orders.py", line 110, in place_order
+    raw = self._client.place_order(
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 175, in place_order
+    result = self._request("POST", "/fapi/v1/order", params=params, signed=True)
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 107, in _request
+    raise BinanceAPIError(data["code"], data.get("msg", "Unknown error"))
+bot.client.BinanceAPIError: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:39:44 | ERROR    | trading_bot | Order submission failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:40:41 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:40:41 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:40:41 | INFO     | trading_bot | CLI place-order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:40:41 | DEBUG    | trading_bot.orders | Validated inputs — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:40:41 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=N/A
+2026-06-11 23:40:41 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1781201441634}
+2026-06-11 23:40:41 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-11 23:40:41 | ERROR    | trading_bot.orders | Order failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\My_studies\trading_bot\trading_bot\bot\orders.py", line 110, in place_order
+    raw = self._client.place_order(
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 175, in place_order
+    result = self._request("POST", "/fapi/v1/order", params=params, signed=True)
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 107, in _request
+    raise BinanceAPIError(data["code"], data.get("msg", "Unknown error"))
+bot.client.BinanceAPIError: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:40:41 | ERROR    | trading_bot | Order submission failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:41:38 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:41:38 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:41:38 | INFO     | trading_bot | CLI place-order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:41:38 | DEBUG    | trading_bot.orders | Validated inputs — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=None stop_price=None
+2026-06-11 23:41:38 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=N/A
+2026-06-11 23:41:38 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1781201498176}
+2026-06-11 23:41:38 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-11 23:41:38 | ERROR    | trading_bot.orders | Order failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\My_studies\trading_bot\trading_bot\bot\orders.py", line 110, in place_order
+    raw = self._client.place_order(
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 175, in place_order
+    result = self._request("POST", "/fapi/v1/order", params=params, signed=True)
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 107, in _request
+    raise BinanceAPIError(data["code"], data.get("msg", "Unknown error"))
+bot.client.BinanceAPIError: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:41:38 | ERROR    | trading_bot | Order submission failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:47:11 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:47:11 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:47:11 | DEBUG    | trading_bot.client | → GET https://testnet.binancefuture.com/fapi/v1/time  params={}
+2026-06-11 23:47:11 | DEBUG    | trading_bot.client | ← HTTP 200  body={"serverTime":1781201831878}
+2026-06-11 23:47:11 | INFO     | trading_bot | Ping successful — serverTime=1781201831878
+2026-06-11 23:47:25 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:47:25 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:47:25 | INFO     | trading_bot | CLI place-order — symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-11 23:47:25 | DEBUG    | trading_bot.orders | Validated inputs — symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-11 23:47:25 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=N/A
+2026-06-11 23:47:25 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1781201845152}
+2026-06-11 23:47:25 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-11 23:47:25 | ERROR    | trading_bot.orders | Order failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\My_studies\trading_bot\trading_bot\bot\orders.py", line 110, in place_order
+    raw = self._client.place_order(
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 175, in place_order
+    result = self._request("POST", "/fapi/v1/order", params=params, signed=True)
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 107, in _request
+    raise BinanceAPIError(data["code"], data.get("msg", "Unknown error"))
+bot.client.BinanceAPIError: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:47:25 | ERROR    | trading_bot | Order submission failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:47:37 | INFO     | trading_bot | Logger initialised — writing to logs\trading_bot_20260611.log
+2026-06-11 23:47:37 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2026-06-11 23:47:37 | INFO     | trading_bot | CLI place-order — symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=100000 stop_price=None
+2026-06-11 23:47:37 | DEBUG    | trading_bot.orders | Validated inputs — symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=100000 stop_price=None
+2026-06-11 23:47:37 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=100000
+2026-06-11 23:47:37 | DEBUG    | trading_bot.client | → POST https://testnet.binancefuture.com/fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '100000', 'timeInForce': 'GTC', 'timestamp': 1781201857913}
+2026-06-11 23:47:38 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-11 23:47:38 | ERROR    | trading_bot.orders | Order failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\My_studies\trading_bot\trading_bot\bot\orders.py", line 110, in place_order
+    raw = self._client.place_order(
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 175, in place_order
+    result = self._request("POST", "/fapi/v1/order", params=params, signed=True)
+  File "D:\My_studies\trading_bot\trading_bot\bot\client.py", line 107, in _request
+    raise BinanceAPIError(data["code"], data.get("msg", "Unknown error"))
+bot.client.BinanceAPIError: Binance API error -2015: Invalid API-key, IP, or permissions for action
+2026-06-11 23:47:38 | ERROR    | trading_bot | Order submission failed: Binance API error -2015: Invalid API-key, IP, or permissions for action
