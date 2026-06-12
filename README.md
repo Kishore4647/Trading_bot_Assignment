@@ -4,6 +4,8 @@ A lightweight Python CLI application for placing orders on Binance Futures Testn
 
 ---
 
+#Note: Please Create a .env file and get your API and Secert Keys and set environment Variables. 
+
 ## Features
 
 | Feature | Details |
